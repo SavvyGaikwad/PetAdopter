@@ -1,5 +1,6 @@
 CREATE TABLE pet (
     pet_id INT AUTO_INCREMENT PRIMARY KEY,
+     category VARCHAR(50) NOT NULL,
     name VARCHAR(50) NOT NULL,
     species VARCHAR(100) NOT NULL,
     gender VARCHAR(20) NOT NULL,
@@ -7,3 +8,25 @@ CREATE TABLE pet (
     age INT NOT NULL,
     breed VARCHAR(100) NOT NULL
 );
+
+INSERT INTO pet (category, name, species, gender, adoption_status, age, breed)
+VALUES
+('Dogs', 'Chanda', 'Domestic', 'Male', 'adopted', 5, 'Canis'),
+('Squirrel', 'Anu', 'Eastern Gray Fox', 'Female', 'adopted', 4, 'canis'),
+('Bull', 'Ganesha', 'Domestic Cattle', 'Male', 'adopted', 2, 'Bostaurus'),
+('Cat', 'Tara', 'Domestic Cat', 'Female', 'notadopted', 2, 'FelisCatus'),
+('Cow', 'Gopi', 'Domestic Cattle', 'Female', 'adopted', 4, 'Bostaurus'),
+('Parrot', 'Maya', 'Macaw', 'Male', 'notadopted', 2, 'Macaw'),
+('Horse', 'Chetak', 'Domestic Horse', 'Male', 'notadopted', 4, 'Domestic'),
+('Dogs', 'Bheem', 'Domestic Cattle', 'Female', 'adopted', 6, 'GermanShepherd'),
+('Turtle', 'Meher', 'Box Turtle', 'Male', 'notadopted', 4, 'BoxTurtle'),
+('Dog', 'Buddy', 'Golden Retriever', 'Male', 'adopted', 3, 'Golden');
+('Cat', 'Whiskers', 'Domestic Cat', 'Male', 'notadopted', 1, 'Domestic'),
+('Dog', 'Max', 'Labrador Retriever', 'Male', 'notadopted', 2, 'Labrador'),
+('Fish', 'Nemo', 'Clownfish', 'Male', 'notadopted', 1, 'Clownfish'),
+('Bird', 'Kiwi', 'Cockatiel', 'Female', 'adopted', 3, 'Cockatiel'),
+('Rabbit', 'Flopsy', 'Dwarf Rabbit', 'Female', 'adopted', 1, 'Dwarf'),
+('Snake', 'Slinky', 'Ball Python', 'Male', 'notadopted', 2, 'Python'),
+('Hamster', 'Nibbles', 'Syrian Hamster', 'Male', 'adopted', 1, 'Syrian'),
+('Guinea Pig', 'Cocoa', 'American Guinea Pig', 'Female', 'adopted', 2, 'American'),
+('Ferret', 'Bandit', 'Domestic Ferret', 'Male', 'notadopted', 3, 'Domestic');
