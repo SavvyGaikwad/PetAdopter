@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pets - Pet Adoption Center</title>
+    <style>
+        /* Your Our Pets CSS styles here */
+        /* Define the styles from your Our Pets.css file here */
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ccc;
+        }
+
+        /* Hero section styles */
+        .hero-wrap {
+            background-image: url('static/images/Our Pets.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Adjust as needed */
+            position: relative;
+        }
+
+        .hero-text {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Pet Cards container */
+        .petContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        /* Pet Card styles */
+        .petCard {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .petCard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    flex: 1;
+}
+
+.footer-menu h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+  
+</nav>
+
+<div class="hero-wrap">
+    <div class="hero-text">
+        <h1 style="color: white; font-weight: bold;">OUR PETS</h1>
+    </div>
+</div>
+
+<div class="petContainer"><div class="petCard" id="card-1"> 
+    <a href="\tara" target="_blank">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/l3khsi80/poster/t/d/b/small-cute-cat-poster-multicolor-photo-paper-print-poster-cute-original-imagezffcmvryfk8.jpeg?q=90&crop=false" alt="">
+    </a>
+</div>
+
+<div class="petCard" id="card-2">
+    <a href="\Anu" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyI2g2mdaAJcwIYonS8ktDudv6JiTUVkGOD0XA-Hvi-g&s" alt="Chanda">
+    </a>
+</div>
+
+<div class="petCard" id="card-3">
+    <a href="\Chanda" target="_blank">
+        <img src="static/images/chanda.jpeg" alt="Chanda">
+             </a>
+</div>
+
+<div class="petCard" id="card-4">
+    <a href="\Ganesha" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEU8fZh3w5hhCo5VTl1ouagcYa7B9E0Ln76Reu4cV5qg&s" alt="Ganesha">
+           </a>
+</div>
+
+<div class="petCard" id="card-5">
+    <a href="/Gulab" target="_blank">
+        <img src="{{ url_for('static', filename='images/gulab.jpeg') }}" alt="Gulab">
+    </a>
+</div>
+
+<div class="petCard" id="card-6">
+    <a href="\Gopi" target="_blank"> 
+        <img src="https://t3.ftcdn.net/jpg/00/84/09/18/360_F_84091840_8wn1lAJ7jIuYRczt4PRqrrZUoAOoPVrO.jpg" alt="Gopi">
+    </a>
+</div>
+
+<div class="petCard" id="card-7">
+    <a href="#" target="_blank"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnz_3XhdZmiGl-CigCJZjl2Cl3iqKUf5TSeW6GYJgG3Q&s" alt="">
+    </a>
+</div>
+
+<div class="petCard" id="card-8">
+    <a href="#" target="_blank"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbqmVaPHkK0cNECuRbEeIZcz5rnSXSag7rALLr6AM9A&s" alt="">
+    </a>
+</div>
+
+<div class="petCard" id="card-9">
+    <a href="#" target="_blank"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCXQEMqpeaYFQevCCN26aHD3uyGn6GxFKXU9BQfQ9cYw&s" alt="">
+    </a>
+</div>
+
+<div class="petCard" id="card-10">
+    <a href="#" target="_blank"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-fdS2azsmkSRzjB9kmxkgEvjBjKGs1tRcjlb7GEPXRQ" alt="">
+    </a>
+</div>
+
+</div>
+<section class="footer">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/shelter">Shelter</a></li>
+                    <li><a href="/our_pets">Our Pets</a></li>
+                    <li><a href="/team">Team</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: savvygaikwa1@gmail.com</p>
+                <p>Phone: 7666754429</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>

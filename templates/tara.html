@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Info About Cat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .Cat-info {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center; /* Centering text */
+        }
+        .Cat-info img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        .btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        form {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: calc(100% - 18px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto;
+            background-color: #008CBA; /* Blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #006699; /* Darker Blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Information About Tara</h1>
+        <div class="Cat-info">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/l3khsi80/poster/t/d/b/small-cute-cat-poster-multicolor-photo-paper-print-poster-cute-original-imagezffcmvryfk8.jpeg?q=90&crop=false" alt="Cat">
+            <p><strong>Name:</strong>Tara</p>
+            <p><strong>Breed:</strong> Domestic Shorthair</p>
+            <p><strong>Age:</strong> 3 months old</p>
+            <p><strong>Gender:</strong>Female</p>
+            <p><strong>Species:</strong>Domestic Cat</p>
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="show-medical-records-btn">Show Medical Records</button>
+            <button class="btn" id="show-form-btn">Adopter Form</button>
+        </div>
+
+        <!-- Adopter Form -->
+        <h2 id="form-title" style="display: none;">Adopter Form</h2>
+        <form id="adopter-form" style="display: none;">
+            <label for="adopter-id">Adopter ID:</label>
+            <input type="text" id="adopter-id" name="adopter-id" required>
+
+            <label for="adopter-name">Name:</label>
+            <input type="text" id="adopter-name" name="adopter-name" required>
+
+            <label for="adopter-email">Email:</label>
+            <input type="email" id="adopter-email" name="adopter-email" required>
+
+            <label for="adopter-phone">Phone No:</label>
+            <input type="tel" id="adopter-phone" name="adopter-phone" required>
+
+            <label for="adopter-address">Address:</label>
+            <textarea id="adopter-address" name="adopter-address" rows="4" required></textarea>
+
+            <label for="adopter-house-no">House No:</label>
+            <input type="text" id="adopter-house-no" name="adopter-house-no" required>
+
+            <label for="adopter-street">Street:</label>
+            <input type="text" id="adopter-street" name="adopter-street" required>
+
+            <label for="adopter-pin">PIN:</label>
+            <input type="text" id="adopter-pin" name="adopter-pin" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('show-form-btn').addEventListener('click', function() {
+            document.getElementById('show-form-btn').style.display = 'none';
+            document.getElementById('show-medical-records-btn').style.display = 'none';
+            document.getElementById('form-title').style.display = 'block';
+            document.getElementById('adopter-form').style.display = 'block';
+        });
+
+        document.getElementById('show-medical-records-btn').addEventListener('click', function() {
+            // Redirect to the next page
+            window.location.href = "medical-records_tara.html";
+        });
+    </script>
+</body>
+</html>
