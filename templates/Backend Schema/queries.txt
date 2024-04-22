@@ -20,7 +20,7 @@ VALUES
 ('Horse', 'Chetak', 'Domestic Horse', 'Male', 'notadopted', 4, 'Domestic'),
 ('Dogs', 'Bheem', 'Domestic Cattle', 'Female', 'adopted', 6, 'GermanShepherd'),
 ('Turtle', 'Meher', 'Box Turtle', 'Male', 'notadopted', 4, 'BoxTurtle'),
-('Dog', 'Buddy', 'Golden Retriever', 'Male', 'adopted', 3, 'Golden');
+('Dog', 'Buddy', 'Golden Retriever', 'Male', 'adopted', 3, 'Golden')
 ('Cat', 'Whiskers', 'Domestic Cat', 'Male', 'notadopted', 1, 'Domestic'),
 ('Dog', 'Max', 'Labrador Retriever', 'Male', 'notadopted', 2, 'Labrador'),
 ('Fish', 'Nemo', 'Clownfish', 'Male', 'notadopted', 1, 'Clownfish'),
@@ -30,3 +30,4 @@ VALUES
 ('Hamster', 'Nibbles', 'Syrian Hamster', 'Male', 'adopted', 1, 'Syrian'),
 ('Guinea Pig', 'Cocoa', 'American Guinea Pig', 'Female', 'adopted', 2, 'American'),
 ('Ferret', 'Bandit', 'Domestic Ferret', 'Male', 'notadopted', 3, 'Domestic');
+
