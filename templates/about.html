@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet Adoption Center</title>
+    <style>
+        /* Your CSS styles here */
+        /* Navbar styles */
+     
+/* Importing custom font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Setting font family */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #414549;
+    padding: 1rem;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #cfbcbc;
+}
+
+/* Hero section styles */
+.hero-wrap {
+    background-image: url('Our Pets.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.hero-text {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* About section styles */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+.about-section h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem; /* Increased font size for headings */
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem; /* Increased font size for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Photo section styles */
+.photo-section {
+    overflow-x: auto; /* Set to auto for horizontal scrolling */
+    white-space: nowrap;
+    padding: 20px 0;
+    display: flex; /* Ensure flexbox layout */
+    background-color: #000000;
+}
+
+.photo-section img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Community involvement styles */
+.community-involvement {
+    padding: 50px 20px;
+    background-color: rgb(0, 0, 0); /* Light gray background */
+    text-align: center;
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+.community-involvement h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.community-involvement p {
+    color: hsl(0, 100%, 90%);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.community-involvement ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 50px;
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+}
+
+.community-involvement ul li {
+    margin-bottom: 10px;
+}
+
+.community-involvement ul li:before {
+    content: "\2022";
+    color: #9db6d1; /* Blue bullet point color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.testimonial-section {
+    background-color: #050505;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+}
+
+.testimonial img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: hsl(0, 0%, 57%);
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+/* Volunteer opportunity styles */
+.volunteer-opportunity {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #000000;
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+    color: #ffffff;
+}
+
+.volunteer-opportunity h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.volunteer-opportunity h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: hsl(0, 100%, 90%);
+}
+
+.volunteer-opportunity p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.volunteer-opportunity ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.volunteer-opportunity li {
+    margin-bottom: 10px;
+}
+
+.volunteer-opportunity a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.volunteer-opportunity a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    flex: 1;
+}
+
+.footer-menu h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Copyright styles */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="shelter.html" class="nav-link">Shelter</a></li>
+            <li class="nav-item active"><a href="main.html" class="nav-link">Our Pets</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+<div class="hero-wrap">
+    <div class="hero-text">
+        <h1 style="color: white; font-weight: bold;">ABOUT US</h1>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE Pet Adoption Center</title>
+</head>
+<body>
+
+<section class="about-section">
+    <div class="container">
+        <h2>Welcome to HOPE Pet Adoption Center</h2>
+        <p>HOPE Pet Adoption Center is dedicated to finding loving homes for pets in need. We strive to provide a safe and caring environment for animals while they await adoption. Our team of dedicated staff and volunteers work tirelessly to ensure that each pet receives the love and attention they deserve.</p>
+        <p>At HOPE Pet Adoption Center, we believe that every pet deserves a second chance at happiness. Whether you're looking for a playful kitten, a loyal dog, or a cuddly bunny, we have a wide variety of animals available for adoption. We also provide resources and support to help pet owners provide the best care for their furry friends.</p>
+        <p>In addition to adoption services, we offer educational programs and community outreach initiatives to promote responsible pet ownership and raise awareness about animal welfare issues. Through our efforts, we aim to create a more compassionate and empathetic society where all animals are treated with kindness and respect.</p>
+        <p>Thank you for considering adoption from HOPE Pet Adoption Center. Together, we can make a difference in the lives of animals and give them the loving homes they deserve.</p>
+    </div>
+</section>
+
+<section class="photo-section">
+    <div class="container">
+        <img src="16.jpg" alt="">
+        <img src="14.jpg" alt="">
+        <img src="15.jpg" alt="">
+        <img src="7.jpg" alt="">
+        <img src="21.jpg" alt="">
+        <img src="20.jpg" alt="">
+        <img src="19.jpg" alt="">
+        <img src="18.jpg" alt="">
+        <img src="12.jpg" alt="">
+        <img src="13.jpg" alt="">
+    </div>
+</section>
+
+<section class="community-involvement">
+    <div class="container">
+        <h2>Community Involvement</h2>
+        <p><strong>Our community involvement is integral to our mission of promoting responsible pet ownership and advocating for animal welfare. Here's how it works:</strong></p>
+        <ul>
+            <li>We actively participate in local community events such as pet adoption fairs, fundraisers, and awareness campaigns.</li>
+            <li>Through educational programs, we aim to enlighten pet owners about the importance of vaccinations, spaying/neutering, and proper pet care.</li>
+            <li>Our outreach initiatives involve collaborating with schools, libraries, and other institutions to teach children about empathy and compassion towards animals.</li>
+            <li>We also conduct workshops and seminars to address common issues faced by pet owners and provide solutions to improve the well-being of their pets.</li>
+        </ul>
+        <p><strong>By engaging with the community, we not only raise awareness about animal welfare but also foster a sense of responsibility and compassion towards animals. Here are some ways our community involvement benefits both pets and people:</strong></p>
+        <ul>
+            <li>It helps reduce pet overpopulation by promoting spaying/neutering and responsible pet adoption.</li>
+            <li>By educating pet owners, we enhance the quality of life for pets, resulting in happier and healthier animals.</li>
+            <li>Our efforts contribute to building a more compassionate society where animals are treated with kindness and respect.</li>
+        </ul>
+        <p><strong>Some of our famous rescue operations include:</strong></p>
+        <ul>
+            <li>The <strong>Furry Friends Adoption Drive</strong> where we rescued and found homes for over 100 abandoned pets in collaboration with local shelters.</li>
+            <li>The <strong> For a Cause </strong> charity event, which raised funds to provide medical treatment and rehabilitation for injured and neglected animals.</li>
+            <li>The <strong>Stray to Home</strong> initiative, where we worked with volunteers to rescue stray animals, provide veterinary care, and facilitate their adoption into loving families.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img src="r1.jpg" alt="Testimonial 1">
+                <p class="testimonial-text">"Adopting my beloved pet from HOPE Pet Adoption Center was the most heartwarming experience. Not only did I gain a loyal companion, but I also witnessed the dedication and love the staff puts into caring for each animal. It's truly a haven for pets in need."</p>
+                <p class="testimonial-author">- Sarah M.</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img src="r2.jpg" alt="Testimonial 2">
+                <p class="testimonial-text">"I've never seen such a dedicated team of animal lovers. The care and attention they give to each animal are unparalleled. I highly recommend HOPE Pet Adoption Center to anyone looking to adopt a furry friend."</p>
+                <p class="testimonial-author">- John D.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="volunteer-opportunity">
+    <div class="container">
+        <h2>Volunteer Opportunities</h2>
+        <p>Join our team of dedicated volunteers and make a difference in the lives of animals. Whether you can offer your time, skills, or resources, every contribution helps us provide better care for our furry friends.</p>
+        
+        <h3>Roles of Volunteers</h3>
+        <p>As a volunteer at our Pet Adoption Center, you'll have the opportunity to:</p>
+        <ul>
+            <li>Assist with daily care tasks</li>
+            <li>Maintaining the facilities</li>
+            <li>Participate in adoption events and assist potential adopters.</li>
+            <li>Provide support during educational programs and outreach initiatives.</li>
+        </ul>
+        
+        <h3>Benefits of Volunteering</h3>
+        <p>Volunteering with our Pet Adoption Center offers numerous benefits, including:</p>
+        <ul>
+            <li>Certificate and merch</li>
+            <li>Trophies for internal competitions</li>
+            <li>Letter of Recommendation</li>
+        </ul>
+        
+        <h3>Veterinary Internship Program</h3>
+        <p>We also offer a 60-day internship program for veterinary students under the guidance of reputed doctors who have been working at our center for over two years. This internship provides hands-on experience in veterinary care and shelter medicine.</p>
+        <p>To apply for the internship program or register as a volunteer, please send your CV and resume to <a href="mailto:vol_in@gmail.com">vol_in@gmail.com</a>.</p>
+    </div>
+</section>
+
+<section class="footer">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="our_pets.html">Our Pets</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: savvygaikwa1@gmail.com</p>
+                <p>Phone: 7666754429</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>
