@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shelters</title>
+    <title>Our Pets</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,18 +27,7 @@
         }
 
         .card-body {
-            padding: 20px;
-            text-align: justify;
-        }
-
-        .card-title {
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            color: #555;
+            display: none; /* Hide the card body */
         }
     </style>
 </head>
@@ -48,7 +37,7 @@
     <ul class="navbar-nav">
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="shelter.html" class="nav-link">Shelter</a></li>
-        <li class="nav-item active"><a href="our_pets.html" class="nav-link">Our Pets</a></li>
+        <li class="nav-item active"><a href="our_pets" class="nav-link">Our Pets</a></li>
         <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
@@ -56,19 +45,10 @@
 
 <div class="container mt-5">
     <div class="row">
-        {% for shelter in shelters %}
+        {% for pet in pets %}
         <div class="col-md-4">
             <div class="card">
-                
-                <div class="card-body">
-                    <h5 class="card-title">{{ shelter[1] }}</h5> <!-- Display shelter_name -->
-                    <p class="card-text">
-                        Location: {{ shelter[3] }}<br>
-                        Contact Person: {{ shelter[4] }}<br>
-                        Contact No: {{ shelter[5] }}<br>
-                        Shelter Mail: {{ shelter[6] }}<br>
-                    </p>
-                </div>
+                <img class="card-img-top" src="{{ pet[8] }}" alt="{{ pet[2] }}"> <!-- Display pet image -->
             </div>
         </div>
         {% endfor %}
