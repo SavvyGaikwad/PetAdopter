@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .record-info {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Records</h1>
+        {% for record in medical_records %}
+        <div class="record-info">
+            <p><strong>Date of Visit:</strong> {{ record[2] }}</p>
+            <p><strong>Medicines or Vaccinations:</strong> {{ record[3] }}</p>
+            <p><strong>Diagnosis:</strong> {{ record[4] }}</p>
+            <p><strong>Doctor's Name:</strong> {{ record[5] }}</p>
+            <p><strong>Doctor's Number:</strong> {{ record[6] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

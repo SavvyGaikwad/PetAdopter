@@ -6,7 +6,8 @@ CREATE TABLE pet (
     gender VARCHAR(20) NOT NULL,
     adoption_status VARCHAR(20) NOT NULL,
     age INT NOT NULL,
-    breed VARCHAR(100) NOT NULL
+    breed VARCHAR(100) NOT NULL,
+    image VARCHAR(255) NOT NULL
 );
 
 INSERT INTO pet (category, name, species, gender, adoption_status, age, breed)
@@ -31,3 +32,34 @@ VALUES
 ('Guinea Pig', 'Cocoa', 'American Guinea Pig', 'Female', 'adopted', 2, 'American'),
 ('Ferret', 'Bandit', 'Domestic Ferret', 'Male', 'notadopted', 3, 'Domestic');
 
+CREATE TABLE medical_records (
+    record_id INT PRIMARY KEY,
+    pet_id INT,
+    date_of_visit VARCHAR(30),
+    Medicines_Or_Vacinations VARCHAR(50),
+    diagnosis VARCHAR(500),
+    Dr_Name VARCHAR(30),
+    Dr_Number INT,
+    FOREIGN KEY (pet_id) REFERENCES pets(pet_id)
+);
+
+INSERT INTO medical_records(record_id, pet_id, date_of_visit, Medicines_Or_Vacinations, diagnosis, Dr_Name, Dr_Number) 
+VALUES 
+(0021, 1, '21 April 2024', 'Ferrous sulfate', 'Low Iron Level, include raw egg yolk and greens in feed.', 'Dr. Pranoti Shinde', 1010101010),
+(0022, 2, '30 April 2024', ' Virkon S', 'Squirrel Pox, get vaccinated and keep away from other animals contact.', 'Dr. Savvy Gaikwad', 1010101010),
+(0023, 3, '20 April', 'Mebendazole', 'Keep close monitoring', 'Dr Tanvi Gaikwad', 1010101010),
+(0024, 4, '15 March 2024', 'Leptospirosis', 'None', 'None', 0),
+(0025, 5, '30 March 2024', 'Laxative', 'Constipated and isn't in good health will admit if no improvements soon', 'Dr Ifra Shaikh', 2020202020),
+(0026, 6, '27 February 2024', '1% Potassium Permanganate Solution Application', 'Foot and Mouth Disease apply solution 3-4 time per day', 'Dr Vaishnavi', 2020),
+(0027, 7, '1 May 2024', 'Doxycycline', 'Psittacosis', 'Dr Sakshi', 303030),
+(0028, 8, '3 May 2024', 'Iodine based antiseptic', 'Ringworm', 'Dr Mansi', 40404),
+(0029, 9, '15 May 2024', 'Core', 'Canine Distemper vaccination needed', 'Dr Pranoti Shinde', 1010101010),
+(0030, 10, '30 May 2024', 'Surgical Drainage', 'Abscesses Surgery needed as soon as possible', 'Dr Ifra Shaikh', 2020202020),
+(0031, 11, '12 April 2023', 'EDTA injection', 'Lead poisoning', 'Dr Akanksha', 200002),
+(0032, 12, 'None', 'None', 'None', 'None', 0),
+(0033, 13, 'None', 'None', 'None', 'None', 0),
+(0034, 14, '30 April 2024', 'Metacam', 'Panosteitis', 'Dr Tanvi Gaikwad', 1010101010),
+(0035, 15, '28 May 2024', 'Moxydectin', 'Mites', 'Dr Aanchal', 300003),
+(0036, 16, 'None', 'None', 'None', 'None', 0),
+(0037, 17, '17 May 2024', 'Clindamycin', 'Pneumonia', 'Dr Shreya', 9000009),
+(0040, 18, 'None', 'None', 'None', 'None', 0);
