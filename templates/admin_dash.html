@@ -1,3 +1,4 @@
+<!-- #region 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <style>
-        /* Your CSS styles here */
-        /* Define your CSS styles for the admin dashboard */
 
         /* Navbar styles */
         .navbar {
@@ -42,7 +41,7 @@
             background-image: url('static/images/Our Pets.jpeg');
             background-size: cover;
             background-position: center;
-            height: 400px; /* Adjust as needed */
+            height: 400px; 
             position: relative;
         }
 
@@ -60,7 +59,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            margin-top: 20px; /* Adjust as needed */
+            margin-top: 20px; 
         }
 
         /* Pet Card styles */
@@ -144,7 +143,6 @@
         <li class="nav-item"><a class="nav-link" href="/our_pets">Our Pets</a></li>
         <li class="nav-item"><a class="nav-link" href="/team">Team</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-        <!-- Additional tabs for admin actions -->
         <li class="nav-item"><a class="nav-link" href="/add_adopter_form">Add Adopter</a></li>
         <li class="nav-item"><a class="nav-link" href="/delete_adopter_form">Delete Adopter</a></li>
         <li class="nav-item"><a class="nav-link" href="/add_pet_form">Add Pet</a></li>
@@ -158,9 +156,9 @@
     </div>
 </div>
 
-<!-- Placeholder content for the admin dashboard -->
+ Placeholder content for the admin dashboard 
 <div class="petContainer">
-    <!-- You can add content for admin actions here -->
+    You can add content for admin actions here 
 </div>
 
 <section class="footer">
@@ -187,6 +185,201 @@
         </div>
     </footer>
 </section>
+
+</body>
+</html> 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ccc;
+        }
+
+        /* Hero section styles */
+        .hero-wrap {
+            background-color: #343a40;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Pet Cards container */
+        .petContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Distribute space between items */
+            margin-top: 20px;
+            background-color: #f2f2f2; /* Faint background color for the cards */
+            padding: 20px; /* Add padding to the container */
+            border-radius: 10px; /* Add border radius to the container */
+            max-width: 960px; /* Set maximum width for the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        /* Pet Card styles */
+        .petCard {
+            width: calc(33.33% - 20px); /* Calculate width for each card (1/3 of container minus margin) */
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff; /* White background for each card */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+            transition: transform 0.3s ease; /* Add transition effect for hover */
+        }
+
+        .petCard:hover {
+            transform: translateY(-5px); /* Move the card up slightly on hover */
+            background-color:#c4c9ce;
+        }
+
+        .petCard a {
+            display: block; /* Make anchor tags fill the entire card */
+            text-decoration: none;
+            color: #333;
+        }
+
+        .petCardImage {
+            height: 200px; /* Set height for the image section */
+            overflow: hidden;
+        }
+
+        .petCardImage img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensure the image fills the container */
+        }
+
+        .petCardBody {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .petCardBody h3 {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/shelter">Shelter</a></li>
+        <li class="nav-item"><a class="nav-link" href="/our_pets">Our Pets</a></li>
+        <li class="nav-item"><a class="nav-link" href="/team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/add_adopter_form">Add Adopter</a></li>
+        <li class="nav-item"><a class="nav-link" href="/delete_adopter_form">Delete Adopter</a></li>
+        <li class="nav-item"><a class="nav-link" href="/add_pet_form">Add Pet</a></li>
+        <li class="nav-item"><a class="nav-link" href="/delete_pet_form">Delete Pet</a></li>
+    </ul>
+</nav>
+
+<div class="hero-wrap">
+    <div class="hero-text">
+        <h1>Admin Dashboard</h1>
+    </div>
+</div>
+
+<!-- Placeholder content for the admin dashboard -->
+<div class="petContainer">
+    <div class="petCard">
+        <a href="/shelter">
+            <div class="petCardImage">
+                <img src="static/images/10.jpg" alt="Shelter">
+            </div>
+            <div class="petCardBody">
+                <h3>Shelter</h3>
+            </div>
+        </a>
+    </div>
+    <div class="petCard">
+        <a href="/our_pets">
+            <div class="petCardImage">
+                <img src="static/images/4.jpg" alt="Our Pets">
+            </div>
+            <div class="petCardBody">
+                <h3>Our Pets</h3>
+            </div>
+        </a>
+    </div>
+    <div class="petCard">
+        <a href="/add_adopter_form">
+            <div class="petCardImage">
+                <img src="static/images/15.jpg" alt="Add Adopter">
+            </div>
+            <div class="petCardBody">
+                <h3>Add Adopter</h3>
+            </div>
+        </a>
+    </div>
+    <div class="petCard">
+        <a href="/delete_adopter_form">
+            <div class="petCardImage">
+                <img src="static/images/r2.jpg" alt="Delete Adopter">
+            </div>
+            <div class="petCardBody">
+                <h3>Delete Adopter</h3>
+            </div>
+        </a>
+    </div>
+    <div class="petCard">
+        <a href="/add_pet_form">
+            <div class="petCardImage">
+                <img src="static/images/11.jpg" alt="Add Pet">
+            </div>
+            <div class="petCardBody">
+                <h3>Add Pet</h3>
+            </div>
+        </a>
+    </div>
+    <div class="petCard">
+        <a href="/delete_pet_form">
+            <div class="petCardImage">
+                <img src="static/images/7.jpg" alt="Delete Pet">
+            </div>
+            <div class="petCardBody">
+                <h3>Delete Pet</h3>
+            </div>
+        </a>
+    </div>
+</div>
 
 </body>
 </html>

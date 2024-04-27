@@ -1,3 +1,5 @@
+<!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,18 +61,235 @@
         {% for pet in pets %}
         <div class="col-md-4">
             <div class="card">
-                <!-- Display the pet image -->
+                
                 <img src="{{ pet[8] }}" class="card-img-top" alt="Pet Image">
                 <div class="card-body">
-                    <!-- Display the pet name -->
+                    
                     <h5 class="card-title">{{ pet[2] }}</h5>
-                    <!-- Button to view pet details -->
+                    
                     <a href="{{ url_for('pet_info', pet_id=pet[0]) }}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
+</div>
+
+</body>
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Our Pets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #414549;
+            padding: 1rem;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #cfbcbc;
+        }
+
+        /* Hero section styles */
+        .hero-wrap {
+            background-image: url('static/images/Our\ Pets.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+        }
+
+        .hero-text {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-menu {
+            flex: 1;
+        }
+
+        .footer-menu h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        /* Copyright styles */
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="shelter.html" class="nav-link">Shelter</a></li>
+        <li class="nav-item active"><a href="OurPets.html" class="nav-link">Our Pets</a></li>
+        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero-wrap">
+    <div class="hero-text">
+        <h1 style="color: white; font-weight: bold;"></h1>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        {% for pet in pets %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ pet[8] }}" class="card-img-top" alt="Pet Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pet[2] }}</h5>
+                    <a href="{{ url_for('pet_info', pet_id=pet[0]) }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+<section class="footer">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="OurPets.html">Our Pets</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: savvygaikwa1@gmail.com</p>
+                <p>Phone: 7666754429</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+
+
 </div>
 
 </body>

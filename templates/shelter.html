@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +62,7 @@
             <div class="card">
                 
                 <div class="card-body">
-                    <h5 class="card-title">{{ shelter[1] }}</h5> <!-- Display shelter_name -->
+                    <h5 class="card-title">{{ shelter[1] }}</h5> 
                     <p class="card-text">
                         Location: {{ shelter[3] }}<br>
                         Contact Person: {{ shelter[4] }}<br>
@@ -74,6 +75,237 @@
         {% endfor %}
     </div>
 </div>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shelters</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        /* Custom Navbar Styles */
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 1rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #cccccc;
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-menu {
+            flex: 1;
+        }
+
+        .footer-menu h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        /* Copyright styles */
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shelter.html">Shelter</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="OurPets.html">Our Pets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-wrap">
+    <img src="static/images/Our Pets.jpeg" alt="Hero Image" style="width: 100%;">
+    <div class="hero-text">
+        <h1 style="color: white; font-weight: bold;">ABOUT US</h1>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row">
+        {% for shelter in shelters %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ shelter[1] }}</h5> <!-- Display shelter_name -->
+                    <p class="card-text">
+                        Location: {{ shelter[3] }}
+                        <br>
+                        Contact Person: {{ shelter[4] }}
+                        <br>
+                        Contact No: {{ shelter[5] }}
+                        <br>
+                        Shelter Mail: {{ shelter[6] }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+<section class="footer">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="OurPets.html">Our Pets</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: savvygaikwa1@gmail.com</p>
+                <p>Phone: 7666754429</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

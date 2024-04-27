@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!--
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,6 +55,90 @@
         }
         button[type="submit"]:hover {
             background-color: #45a049; /* Darker Green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adopter Form</h1>
+        <form action="/submit_adopter_form" method="POST">
+            <label for="adopter-name">Name:</label>
+            <input type="text" id="adopter-name" name="adopter-name" required>
+
+            <label for="adopter-email">Email:</label>
+            <input type="email" id="adopter-email" name="adopter-email" required>
+
+            <label for="adopter-phone">Phone No:</label>
+            <input type="tel" id="adopter-phone" name="adopter-phone" required>
+
+            <label for="adopter-address">Address:</label>
+            <textarea id="adopter-address" name="adopter-address" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopter Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("static/images/bg7.jpeg");
+        }
+        
+        .container 
+        {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color:#0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
