@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!--
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -152,5 +153,244 @@
     </footer>
 </section>
 
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Your CSS styles here */
+        /* Hero section styles */
+        .hero-wrap {
+            background-image: url('static/images/Our\ Pets.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+        }
+
+        .hero-text {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Team member styles */
+        .team-member {
+            margin-bottom: 30px;
+        }
+
+        .team-member h3 {
+            margin-top: 20px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+        }
+
+        .member-img {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #f8f9fa; /* Fallback color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-menu {
+            flex: 1;
+        }
+
+        .footer-menu h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        /* Copyright styles */
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shelter.html">Shelter</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="OurPets.html">Our Pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero-wrap">
+        <div class="hero-text">
+            <h1 style="color: white; font-weight: bold;">OUR TEAM</h1>
+        </div>
+    </div>
+
+    <!-- Team Members Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="team-member text-center">
+                    <div class="member-img">
+                        <img src="static/images/pranoti.jpeg" alt="Team Member 1">
+                    </div>
+                    <h3>Pranoti Shinde</h3>
+                    <p>Founder</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member text-center">
+                    <div class="member-img">
+                        <img src="static/images/savvy.png" alt="Team Member 1">
+                    </div>
+                    <h3>Savvy Gaikwad</h3>
+                    <p>Director</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member text-center">
+                    <div class="member-img">
+                        <img src="static/images/sakashi.jpeg" alt="Team Member 3">
+                    </div>
+                    <h3>Saakshi Shinde</h3>
+                    <p>Activity Manager</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member text-center">
+                    <div class="member-img">
+                        <img src="static/images/ifra.jpeg" alt="Team Member 1">
+                    </div>
+                    <h3>Ifra Shaikh</h3>
+                    <p>Manager</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member text-center">
+                    <div class="member-img">
+                        <img src="static/images/vaishanvi.jpeg" alt="Team Member 1">
+                    </div>
+                    <h3>Vaishnavi Sabale</h3>
+                    <p>Voleenteer Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <footer>
+            <div class="footer-content">
+                <div class="footer-menu">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shelter.html">Shelter</a></li>
+                        <li><a href="OurPets.html">Our Pets</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: savvygaikwa1@gmail.com</p>
+                    <p>Phone: 7666754429</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Your Website. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

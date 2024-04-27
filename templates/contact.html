@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!--
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -148,6 +149,242 @@
                 <h3>Contact Information</h3>
                 <p>Email: example@example.com</p>
                 <p>Phone: +123456789</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Pet Adoption Center. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pet Adoption Center</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #414549;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #cfbcbc;
+        }
+
+        /* Hero section styles */
+        .hero-wrap {
+            background-image: url('static/images/Our\ Pets.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+        }
+
+        .hero-text {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-menu {
+            flex: 1;
+        }
+
+        .footer-menu h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .faq-container {
+            margin-top: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-box {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            margin-bottom: 10px;
+        }
+
+        .faq-card {
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-card:hover {
+            background-color: #ddd;
+        }
+
+        .faq-card-content {
+            display: none;
+            text-align: center;
+        }
+
+        .faq-card:hover .faq-card-content {
+            display: block;
+        }
+
+        .faq-card-content p {
+            margin: 0;
+        }
+
+        .faq-card-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1><a href="index.html" class="nav-link"></a></h1>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="shelter.html" class="nav-link">Shelter</a></li>
+        <li class="nav-item"><a href="OurPets.html" class="nav-link">Our Pets</a></li>
+        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+        <li class="nav-item active"><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero-wrap">
+    <div class="hero-text">
+        <h1 style="color: white; font-weight: bold;">CONTACT US</h1>
+    </div>
+</div>
+
+<section class="faq-container">
+    <div class="faq-box">
+        <h2 class="faq-question">How can I adopt a pet from your center?</h2>
+        <p class="faq-answer">To adopt a pet from our center, please call or mail our shelter authorities during working hours. They will guide you through the adoption process and help you find the perfect pet for your home.</p>
+    </div>
+    <div class="faq-box">
+        <h2 class="faq-question">What is the adoption fee?</h2>
+        <p class="faq-answer">The adoption fee varies depending on the type of pet and its age. Our adoption fees typically cover vaccinations, spaying/neutering, and microchipping. You can find more information about our adoption fees by contacting our center directly.</p>
+    </div>
+    <div class="faq-box">
+        <h2 class="faq-question">Do you offer pet care services?</h2>
+        <p class="faq-answer">Yes, we offer a range of pet care services including vaccinations, spaying/neutering, microchipping, and behavioral training. Our experienced staff members are dedicated to providing the best care for pets in need.</p>
+    </div>
+    <div class="faq-box">
+        <h2 class="faq-question">Can I volunteer at your center?</h2>
+        <p class="faq-answer">Absolutely! We welcome volunteers who are passionate about animals. Volunteers assist with tasks such as feeding, walking, cleaning, and socializing with our pets. Contact us to learn more about volunteer opportunities.</p>
+    </div>
+</section>
+
+<section class="footer">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="OurPets.html">Our Pets</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: savvygaikwad1@gmail.com</p>
+                <p>Phone: 7666754429</p>
             </div>
         </div>
         <div class="copyright">

@@ -9,10 +9,23 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            
+            padding: 0;
+            color: #fff; /* Set default text color to white */
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay */
+            padding: 50px 0; /* Add padding to center content vertically */
         }
         .container {
-            padding-top: 100px;
+            padding: 100px 0; /* Adjust padding to elongate the container */
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 20px;
         }
         .btn {
             display: inline-block;
@@ -21,23 +34,46 @@
             font-size: 18px;
             text-decoration: none;
             color: #fff;
-            background-color: #007bff;
+            background-color: #404448;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #0056b3;
         }
+        /* Additional Styles */
+        .btn-container {
+            margin-top: 30px;
+        }
+        .btn-container a {
+            text-decoration: none;
+        }
+        /* Styling for links */
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ccc;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to our website</h1>
-        <p>Choose your role:</p>
-        <a href="/admin" class="btn">Admin</a>
-        <!-- Replace 'admin' with the appropriate route name if needed -->
-        <a href="/adopter" class="btn">Adopter</a>
+<body style="background-image: url('static/images/land.jpeg');
+            background-size: cover;
+            background-position: center center;">
+    <div class="overlay">
+        <div class="container">
+            <h1>Welcome to Hope Adoption</h1>
+            <p>Choose Your Role</p>
+            <div class="btn-container">
+                <a href="/admin" class="btn">Admin</a>
+                <!-- Replace 'admin' with the appropriate route name if needed -->
+                <a href="/adopter" class="btn">Adopter</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

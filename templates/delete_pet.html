@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,5 +17,78 @@
     <input type="submit" value="Delete Pet">
 </form>
 
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("static/images/bg6.jpeg");
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color:  #fff;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #0056b3;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Delete Pet</h2>
+    <form action="/delete_pet" method="POST">
+        <label for="pet_id">Pet ID:</label><br>
+        <input type="number" id="pet_id" name="pet_id"><br><br>
+        <input type="submit" value="Delete Pet">
+    </form>
 </body>
 </html>
