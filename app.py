@@ -200,7 +200,7 @@ def admin_login():
 @app.route('/admin_dashboard')
 def admin_dashboard():
     # Fetch data or perform any actions needed for the admin dashboard
-    return render_template('admin_dash.html')
+    return render_template('index.html')
 
 # Function to fetch adopter data from the database
 def get_adopter_data():
@@ -341,7 +341,7 @@ def submit_adopter_form():
     if request.method == 'POST':
         # Fetch form data
         adopter_name = request.form['adopter-name']
-        email = request.form['adopter-email']
+        mail = request.form['adopter-email']
         phone = request.form['adopter-phone']
         address = request.form['adopter-address']
 
@@ -350,8 +350,8 @@ def submit_adopter_form():
         cursor = mysql_connection.cursor()
 
         # Insert form data into the adopter table
-        adopter_query = "INSERT INTO adopter (adopter_name, email, cont_no, address) VALUES (%s, %s, %s, %s)"
-        cursor.execute(adopter_query, (adopter_name, email, phone, address))
+        adopter_query = "INSERT INTO adopters (adopter_name, mail, cont_no, address) VALUES (%s, %s, %s, %s)"
+        cursor.execute(adopter_query, (adopter_name, mail, phone, address))
         adopter_id = cursor.lastrowid  # Get the ID of the newly inserted adopter
 
         # Get the pet ID from the URL parameter
