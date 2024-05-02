@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopted Pets</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adopted Pets</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pet Name</th>
+                <th>Adopter Name</th>
+                <th>Adoption Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pet in adopted_pets %}
+            <tr>
+                <td>{{ pet[0] }}</td> <!-- Pet Name -->
+                <td>{{ pet[1] }}</td> <!-- Adopter Name -->
+                <td>{{ pet[2] }}</td> <!-- Adoption Date -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,47 +1,3 @@
-<!--
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Pet</title>
-</head>
-<body>
-
-<h2>Add Pet</h2>
-
-<form action="/add_pet" method="POST">
-    <label for="category">Category:</label><br>
-    <input type="text" id="category" name="category"><br>
-    
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
-    
-    <label for="species">Species:</label><br>
-    <input type="text" id="species" name="species"><br>
-    
-    <label for="gender">Gender:</label><br>
-    <input type="text" id="gender" name="gender"><br>
-    
-    <label for="adoption_status">Adoption Status:</label><br>
-    <input type="text" id="adoption_status" name="adoption_status"><br>
-    
-    <label for="age">Age:</label><br>
-    <input type="number" id="age" name="age"><br>
-    
-    <label for="breed">Breed:</label><br>
-    <input type="text" id="breed" name="breed"><br>
-    
-    <label for="image">Image URL:</label><br>
-    <input type="text" id="image" name="image"><br><br>
-    
-    <input type="submit" value="Add Pet">
-</form>
-
-</body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +13,7 @@
         }
         h2 {
             text-align: center;
-            color:  #fff;
+            color: #fff;
         }
         form {
             max-width: 500px;
@@ -72,7 +28,8 @@
             color: #555;
         }
         input[type="text"],
-        input[type="number"] {
+        input[type="number"],
+        textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -113,9 +70,6 @@
     <label for="gender">Gender:</label><br>
     <input type="text" id="gender" name="gender"><br>
     
-    <label for="adoption_status">Adoption Status:</label><br>
-    <input type="text" id="adoption_status" name="adoption_status"><br>
-    
     <label for="age">Age:</label><br>
     <input type="number" id="age" name="age"><br>
     
@@ -124,7 +78,24 @@
     
     <label for="image">Image URL:</label><br>
     <input type="text" id="image" name="image"><br><br>
-    
+
+    <!-- Medical Records Fields -->
+
+    <label for="date_of_visit">Date of Visit:</label><br>
+    <input type="text" id="date_of_visit" name="in_date_of_visit"><br>
+
+    <label for="medicines_or_vaccinations">Medicines or Vaccinations:</label><br>
+    <input type="text" id="medicines_or_vaccinations" name="in_medicines_or_vaccinations"><br>
+
+    <label for="diagnosis">Diagnosis:</label><br>
+    <textarea id="diagnosis" name="in_diagnosis" rows="4"></textarea><br>
+
+    <label for="dr_name">Doctor Name:</label><br>
+    <input type="text" id="dr_name" name="in_dr_name"><br>
+
+    <label for="dr_number">Doctor Number:</label><br>
+    <input type="text" id="dr_number" name="in_dr_number"><br><br>
+
     <input type="submit" value="Add Pet">
 </form>
 

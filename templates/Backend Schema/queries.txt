@@ -1,4 +1,4 @@
-CREATE TABLE pet (
+CREATE TABLE pets (
     pet_id INT AUTO_INCREMENT PRIMARY KEY,
      category VARCHAR(50) NOT NULL,
     name VARCHAR(50) NOT NULL,
@@ -32,6 +32,34 @@ VALUES
 ('Guinea Pig', 'Cocoa', 'American Guinea Pig', 'Female', 'adopted', 2, 'American'),
 ('Ferret', 'Bandit', 'Domestic Ferret', 'Male', 'notadopted', 3, 'Domestic');
 
+
+CREATE TABLE shelter (
+    shelter_id INT PRIMARY KEY AUTO_INCREMENT,
+    shelter_name VARCHAR(100) NOT NULL,
+    pet_id INT,
+    location VARCHAR(255) NOT NULL,
+    contact_person VARCHAR(100) NOT NULL,
+    contact_no VARCHAR(20) NOT NULL,
+    shelter_mail VARCHAR(100) NOT NULL,
+    FOREIGN KEY (pet_id) REFERENCES pets (pet_id)
+);
+
+INSERT INTO shelter (shelter_name, pet_id, location, contact_person, contact_no, shelter_mail) 
+VALUES 
+('Snehalay', 8, 'Sangavi', 'Priya Sharma', '10000', 'snehalay@gmail.com'),
+('Snehalay', 9, 'Sangavi', 'Priya Sharma', '10000', 'snehalay@gmail.com'),
+('Anandvan', 10, 'Talegaon', 'Rajesh Patel', '10001', 'anandvan@yahoo.com'),
+('Anandvan', 11, 'Talegaon', 'Rajesh Patel', '10001', 'anandvan@yahoo.com'),
+('Premashram', 12, 'Aalandi', 'Anjali Gupta', '10002', 'premashram@hotmail.com'),
+('Premashram', 13, 'Aalandi', 'Anjali Gupta', '10002', 'premashram@hotmail.com'),
+('Sahayog', 14, 'Tatawade', 'Vikram Singh', '10003', 'tatawade.sahayoge@example.com'),
+('Sukhshanti', 15, 'Manjari', 'Meera Reddy', '10004', 'sukhshanti09@example.com'),
+('Sukhshanti', 16, 'Manjari', 'Meera Reddy', '10004', 'sukhshanti09@example.com'),
+('Compassion Center', 17, 'Hadpsar', 'Suresh Kumar', '10005', 'hadpsar.compassion@example.com'),
+('Compassion Center', 18, 'Hadpsar', 'Suresh Kumar', '10005', 'hadpsar.compassion@example.com'),
+('Ashiana', 19, 'Vimanagar', 'Aparna Das', '10006', 'ashiana@hotmail.com');
+
+
 CREATE TABLE medical_records (
     record_id INT PRIMARY KEY,
     pet_id INT,
@@ -63,3 +91,92 @@ VALUES
 (0036, 16, 'None', 'None', 'None', 'None', 0),
 (0037, 17, '17 May 2024', 'Clindamycin', 'Pneumonia', 'Dr Shreya', 9000009),
 (0040, 18, 'None', 'None', 'None', 'None', 0);
+
+CREATE TABLE adopters (
+    adoption_id INT AUTO_INCREMENT PRIMARY KEY,
+    adopter_name VARCHAR(100),
+    mail VARCHAR(100),
+    cont_no VARCHAR(15),
+    address VARCHAR(255)
+);
+
+CREATE TABLE adoption_procedure (
+    procedure_id INT AUTO_INCREMENT PRIMARY KEY,
+    pet_id INT,
+    adopter_id INT,
+    adoption_date DATE,
+    FOREIGN KEY (pet_id) REFERENCES pets(pet_id),
+    FOREIGN KEY (adopter_id) REFERENCES adopters(adoption_id)
+);
+ALTER TABLE adopters
+ADD COLUMN pet_id INT,
+ADD CONSTRAINT fk_pet_id
+FOREIGN KEY (pet_id)
+REFERENCES pets(pet_id);
+
+
+CREATE VIEW adopted_pets_view AS
+SELECT p.name AS pet_name, a.adopter_name, ap.adoption_date
+FROM pets p
+JOIN adoption_procedure ap ON p.pet_id = ap.pet_id
+JOIN adopters a ON ap.adopter_id = a.adoption_id
+WHERE p.adoption_status = 'adopted';
+
+CREATE VIEW pet_info_view AS
+SELECT pet_id, name, species, breed, age, gender
+FROM pets;
+
+
+
+DELIMITER //
+
+CREATE TRIGGER before_insert_pet
+BEFORE INSERT ON pets
+FOR EACH ROW
+BEGIN
+    -- Set adoption status of the newly inserted pet to 'Not Adopted'
+    SET NEW.adoption_status = 'Not Adopted';
+END //
+
+DELIMITER ;
+
+
+CREATE PROCEDURE update_medical_records(
+    IN in_pet_id INT,
+    IN in_date_of_visit VARCHAR(30),
+    IN in_medicines_or_vaccinations VARCHAR(50),
+    IN in_diagnosis VARCHAR(500),
+    IN in_dr_name VARCHAR(30),
+    IN in_dr_number INT
+)
+BEGIN
+    -- Insert or update the medical record for the specified pet
+    INSERT INTO medical_records (pet_id, date_of_visit, Medicines_Or_Vacinations, diagnosis, Dr_Name, Dr_Number)
+    VALUES (in_pet_id, in_date_of_visit, in_medicines_or_vaccinations, in_diagnosis, in_dr_name, in_dr_number)
+    ON DUPLICATE KEY UPDATE
+    date_of_visit = VALUES(date_of_visit),
+    Medicines_Or_Vacinations = VALUES(Medicines_Or_Vacinations),
+    diagnosis = VALUES(diagnosis),
+    Dr_Name = VALUES(Dr_Name),
+    Dr_Number = VALUES(Dr_Number);
+END //
+
+DELIMITER ;
+
+
+ALTER TABLE medical_records
+MODIFY COLUMN record_id INT AUTO_INCREMENT;
+drop table admin;
+
+CREATE TABLE admin (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     username VARCHAR(255) UNIQUE,
+     email VARCHAR(255) UNIQUE,
+     password VARCHAR(255)
+    );
+
+
+ INSERT INTO admin (username, email, password) VALUES
+    ('admin1', 'admin1@example.com', 'password1'),
+    ('admin2', 'admin2@example.com', 'password2'),
+    ('admin3', 'admin3@example.com', 'password3');

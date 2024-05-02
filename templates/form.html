@@ -145,7 +145,8 @@
 <body>
     <div class="container">
         <h1>Adopter Form</h1>
-        <form action="/submit_adopter_form" method="POST">
+        <form action="submit_adopter_form?pet_id={{ pet_id }}" method="POST">
+
             <label for="adopter-name">Name:</label>
             <input type="text" id="adopter-name" name="adopter-name" required>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Adopted Pets</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Not Adopted Pets</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pet ID</th>
+                <th>Pet Name</th>
+                <th>Species</th>
+                <th>Gender</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for pet in not_adopted_pets %}
+            <tr>
+                <td>{{ pet[0] }}</td> <!-- Assuming pet ID is the first column -->
+                <td>{{ pet[1] }}</td> <!-- Assuming pet name is the second column -->
+                <td>{{ pet[2] }}</td> <!-- Assuming species is the third column -->
+                <td>{{ pet[3] }}</td> <!-- Assuming gender is the fourth column -->
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
