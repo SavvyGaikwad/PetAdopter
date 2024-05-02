@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adoption Status</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE Pet Adoption Center</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/SavvyGaikwad/img/main/Como%20Fazer%20_%20Aprenda%20como%20ser%20protetor%20dos%20animais.jpeg" type="image/png">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure the container is vertically centered */
+        }
+        .container {
+            width: 80%;
+            height: 100px;
+            text-align: center;
+            background-image: url("https://raw.githubusercontent.com/SavvyGaikwad/img/main/b11.jpeg"); /* Background image */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the background image */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+        }
+        h1 {
+            color: #000000;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between; /* Space buttons evenly */
+            margin-top: 20px;
+        }
+        a {
+            flex: 1; /* Equal width for both buttons */
+            margin: 0 5px; /* Add some margin between buttons */
+        }
+        button {
+            width: calc(50% - 10px); /* Calculate width to accommodate margin */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Choose Adoption Status</h1>
+<div class="container">
+    <h1>Choose Adoption Status</h1>
 
-<a href="/adopted_pets"><button>Adopted</button></a>
-<a href="/notadopted_pets"><button>Not Adopted</button></a>
-
+    <div class="buttons">
+        <a href="/adopted_pets"><button>Adopted</button></a>
+        <a href="/notadopted_pets"><button>Not Adopted</button></a>
+    </div>
+</div>
 
 </body>
 </html>

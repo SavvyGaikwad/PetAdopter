@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,20 +29,97 @@
                 <th>Pet Name</th>
                 <th>Species</th>
                 <th>Gender</th>
-                <!-- Add more columns as needed -->
+                
             </tr>
         </thead>
         <tbody>
             {% for pet in not_adopted_pets %}
             <tr>
-                <td>{{ pet[0] }}</td> <!-- Assuming pet ID is the first column -->
-                <td>{{ pet[1] }}</td> <!-- Assuming pet name is the second column -->
-                <td>{{ pet[2] }}</td> <!-- Assuming species is the third column -->
-                <td>{{ pet[3] }}</td> <!-- Assuming gender is the fourth column -->
-                <!-- Add more columns as needed -->
+                <td>{{ pet[0] }}</td> 
+                <td>{{ pet[1] }}</td> 
+                <td>{{ pet[2] }}</td> 
+                <td>{{ pet[3] }}</td> 
+                
             </tr>
             {% endfor %}
         </tbody>
     </table>
+</body>
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE Pet Adoption Center</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/SavvyGaikwad/img/main/Como%20Fazer%20_%20Aprenda%20como%20ser%20protetor%20dos%20animais.jpeg" type="image/png">
+   
+    <style>
+        body {
+            background-image: url('https://raw.githubusercontent.com/SavvyGaikwad/img/main/b5.jpeg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for container */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Not Adopted Pets</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pet ID</th>
+                    <th>Pet Name</th>
+                    <th>Species</th>
+                    <th>Gender</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for pet in not_adopted_pets %}
+                <tr>
+                    <td>{{ pet[0] }}</td> <!-- Assuming pet ID is the first column -->
+                    <td>{{ pet[1] }}</td> <!-- Assuming pet name is the second column -->
+                    <td>{{ pet[2] }}</td> <!-- Assuming species is the third column -->
+                    <td>{{ pet[3] }}</td> <!-- Assuming gender is the fourth column -->
+                    <!-- Add more columns as needed -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

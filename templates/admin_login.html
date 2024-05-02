@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,79 @@
     <h2>Admin Login</h2>
     {% if error %}
         <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/adhere" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOPE Pet Adoption Center</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/SavvyGaikwad/img/main/Como%20Fazer%20_%20Aprenda%20como%20ser%20protetor%20dos%20animais.jpeg" type="image/png">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            background-image: url("https://raw.githubusercontent.com/SavvyGaikwad/img/main/b3.jpeg");
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p.error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Login</h2>
+    {% if error %}
+        <p class="error">{{ error }}</p>
     {% endif %}
     <form action="/adhere" method="post">
         <label for="username">Username:</label><br>
